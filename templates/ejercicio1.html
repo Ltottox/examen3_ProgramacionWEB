@@ -1,0 +1,61 @@
+<!--El formulario se debe completar con 3 notas que van de 10 a 70 y una asistencia que va de 0 a 100. 
+Al presionar el botón enviar, 
+la página deberá mostrar el promedio de estas 3 notas y un estado de aprobado o reprobado. 
+Considera que para el estado de aprobado o reprobado se deben cumplir dos condiciones.
+ Que el promedio de las 3 notas sea mayor o igual a 40 y que la asistencia sea mayor o igual a un 75%. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 </title>
+    <link rel="stylesheet" href="/static/css/styleEj1.css">
+</head>
+<body>
+    <!-- CONTENEDOR principal para centrar el contenido -->
+    <div class="container">
+        <!-- TÍTULO visible del ejercicio -->
+        <h1>Formulario de Notas</h1>
+        
+        <form method="POST" class="form-box">
+            <!-- Cada campo está en un form-group para estilos -->
+            <div class="form-group">
+                <label for="nota1">Nota 1 (entre 10-70):</label>
+                <input type="number" id="nota1" name="nota1" min="10" max="70" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nota2">Nota 2 (entre 10-70):</label>
+                <input type="number" id="nota2" name="nota2" min="10" max="70" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nota3">Nota 3 (entre 10-70):</label>
+                <input type="number" id="nota3" name="nota3" min="10" max="70" required>
+            </div>
+
+            <div class="form-group">
+                <label for="asistencia">Asistencia (entre 0-100%):</label>
+                <input type="number" id="asistencia" name="asistencia" min="0" max="100" required>
+            </div>
+
+            <!-- BOTÓN de envío -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <!--BOTON DE REGRESAR A LA PAGINA PRINCIPAL-->
+            <a href="/" class="btn btn-secondary">VOLVER</a>
+
+            <!-- Mostrar resultados si existen -->
+        {% if resultado %}
+            <div class="resultado-box">
+                <h2>Resultados del Cálculo</h2>               
+             <!-- Mostrar promedio y estado -->
+                    <p class="promedio"><strong>Promedio:</strong> {{ resultado.promedio }}</p>
+                    <hr>
+                    <p class="estado"><strong>Estado:</strong> {{ resultado.estado }}</p>             
+            </div>
+        {% endif %}            
+        </form>
+    </div>
+</body>
+</html>

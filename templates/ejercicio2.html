@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/css/styleEj2.css">
+</head>
+<body>
+<!--El formulario se debe completar con 3 nombres diferentes. Al presionar el botón enviar, se deben mostrar 2 cosas.
+ El nombre de la persona cuyo conjunto de caracteres (letras) es más grande con respecto a los otros dos nombres y la cantidad de caracteres que tiene dicho nombre-->
+ <div class="container">
+    <h1>Formulario de Nombres</h1>
+    
+    <form method="POST" class="form-box">
+        <div class="form-group">
+            <label for="nombre1">Nombre 1:</label>
+            <input type="text" id="nombre1" name="nombre1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre2">Nombre 2:</label>
+            <input type="text" id="nombre2" name="nombre2" required>            
+        </div>
+
+        <div class="form-group">
+            <label for="nombre3">Nombre 3:</label>
+            <input type="text" id="nombre3" name="nombre3" required>
+        </div>
+
+        <!-- BOTÓN de envío -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <!--BOTON DE REGRESAR A LA PAGINA PRINCIPAL-->
+        <a href="/" class="btn btn-secondary">VOLVER</a>
+
+        <!-- Mostrar resultados si existen -->
+    {% if resultado %}
+        <div class="resultado-box">
+            <h2>Resultados</h2>               
+         <!-- Mostrar nombre y cantidad de caracteres -->
+                <p class="nombre"><strong>El nombre con mayor cantidad de caracteres es:</strong> {{ resultado.nombre }}</p>
+                <hr>
+                <p class="cantidad"><strong>El nombre tiene:</strong> {{ resultado.cantidad }} caracteres</p>             
+        </div>
+    {% endif %}            
+    </form>
+</div>
+</body>
+</html>

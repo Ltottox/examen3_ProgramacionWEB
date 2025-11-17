@@ -1,0 +1,126 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+}
+
+/* --- FORMULARIO --- */
+.form-box {
+    margin-bottom: 20px;
+}
+
+/* Grupos de inputs */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Etiquetas */
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Inputs */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* --- BOTONES --- */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Botón Enviar */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #217dbb;
+}
+
+/* Botón Volver */
+.btn-secondary {
+    background-color: #7f8c8d;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #636e72;
+}
+
+/* --- RESULTADO --- */
+.resultado-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    border-left: 5px solid #2980b9;
+}
+
+/* Mensaje de error */
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Promedio y estado */
+.promedio,
+.estado {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Estado con color dinámico */
+.aprobado {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.reprobado {
+    color: #c0392b;
+    font-weight: bold;
+}
+
