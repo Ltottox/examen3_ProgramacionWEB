@@ -28,7 +28,7 @@ def ejercicio1():
         resultado = {"promedio": round(promedio, 2),"estado": estado}
     return render_template('ejercicio1.html', resultado=resultado)
 
-
+#recibe los requerimientos del ejercicio 2 y los procesa ademas va a renderizar la plantilla ejercicio2.html
 @app.route('/ejercicio2', methods=["GET", "POST"])
 def ejercicio2():
     resultado = None
