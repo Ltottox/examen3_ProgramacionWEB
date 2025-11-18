@@ -1,0 +1,51 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fondo general */
+body {
+    background: #f0f2f5;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Botones principales */
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Efecto al hacer clic */
+.button:active {
+    transform: translateY(0);
+}
